@@ -45,14 +45,14 @@ function populateInputForm() {
     }
 };
 
-function onFormSubmit (event) {
-    event.preventDefault();
+function onFormSubmit (evt) {
+    evt.preventDefault();
 
     if (refs.input.value === "" || refs.textarea.value === "") {
         alert('Fill all the fields!');
     } else {
         console.log(inputData);
-        event.currentTarget.reset();
+        evt.currentTarget.reset();
         localStorage.removeItem(STORAGE_KEY);
     }
 };
